@@ -430,7 +430,10 @@
             <div class="position-relative bottom-0 start-0 z-1"><img class="img-fluid w-100" src="assets/img/illustrations/Wave_3.svg" alt="" /></div>
           </section>
           
-        </div><button class="btn scroll-to-top text-white rounded-circle d-flex justify-content-center align-items-center bg-primary" data-scroll-top="data-scroll-top"><span class="uil uil-angle-up"></span></button>
+        </div><button class="btn scroll-to-top text-white rounded-circle d-flex justify-content-center align-items-center bg-primary">
+          <span class="uil uil-angle-up"></span>
+        </button>
+        
         <footer class="pt-7 pt-lg-8">
           <div class="container">
             <div class="row gy-2 py-3 justify-content-center justify-content-md-between">
@@ -458,14 +461,20 @@
 
 
     <!-- ===============================================--><!--    JavaScripts--><!-- ===============================================-->
-    <script src="vendors/popper/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
     <script src="vendors/countup/countUp.umd.js"></script>
-    <script src="vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="vendors/lodash/lodash.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Smooth scroll to top
+        $('.scroll-to-top').click(function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop: 0}, 'slow');
+        });
+      });
+    </script>
   </body>
 
 </html>
